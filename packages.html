@@ -1,0 +1,1290 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tour Packages - Middle East Tours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Forum&family=Great+Vibes&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <style>
+    
+    .package-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      margin-bottom: 25px;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .package-card .card-img-top {
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .package-card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    .price-tag {
+      position: absolute;
+      bottom: -15px;
+      right: 20px;
+      background-color: #19a54c;
+      color: white;
+      padding: 6px 15px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 4px 10px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .theme-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(10, 38, 71, 0.8);
+      color: white;
+      padding: 4px 10px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .reviews-count {
+      color: #666;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+
+    .inclusions-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .inclusion-badge {
+      background-color: #f1f9f4;
+      color: #19a54c;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .inclusion-badge i {
+      margin-right: 4px;
+    }
+
+    .package-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #eee;
+      font-size: 0.85rem;
+    }
+
+    .package-meta span {
+      display: flex;
+      align-items: center;
+    }
+
+    .package-meta i {
+      margin-right: 5px;
+      color: #0A2647;
+    }
+
+    .emi-info {
+      font-size: 0.8rem;
+      color: #19a54c;
+      margin-top: 5px;
+    }
+
+    .package-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f1f9f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .package-icon i {
+      color: #19a54c;
+      font-size: 1rem;
+    }
+
+    .package-feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .package-header {
+      height: 400px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/kaaba2.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .filter-button-group .btn {
+      margin: 5px;
+      border-radius: 20px;
+      padding: 8px 16px;
+      border: 1px solid #0A2647;
+      background: white;
+      color: #0A2647;
+      transition: all 0.3s ease;
+    }
+
+    .filter-button-group .btn:hover,
+    .filter-button-group .btn.active {
+      background-color: #0A2647;
+      color: white;
+    }
+    
+    .discount-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #ff5722;
+      color: white;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .theme-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #0A2647;
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    
+    .reviews-count {
+      color: #666;
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+
+    .inclusions-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .inclusion-badge {
+      background-color: #f1f9f4;
+      color: #19a54c;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .inclusion-badge i {
+      margin-right: 5px;
+      font-size: 0.7rem;
+    }
+    
+    .package-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #eee;
+      font-size: 0.85rem;
+    }
+
+    .package-meta span {
+      display: flex;
+      align-items: center;
+    }
+
+    .package-meta i {
+      margin-right: 5px;
+      color: #0A2647;
+    }
+    
+    
+    .nav-pills .nav-link {
+      border-radius: 20px;
+      margin: 0 5px;
+      padding: 8px 20px;
+      color: #0A2647;
+      border: 1px solid #0A2647;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-pills .nav-link.active,
+    .nav-pills .nav-link:hover {
+      background-color: #0A2647;
+      color: white;
+    }
+
+    .rating-stars {
+      color: #FFD700;
+    }
+
+    .package-tag {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background-color: #FF6F3C;
+      color: white;
+      padding: 5px 15px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      z-index: 1;
+    }
+    
+    .package-duration {
+      font-size: 0.9rem;
+      color: #666;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .package-duration i {
+      margin-right: 5px;
+      color: #0A2647;
+    }
+    
+    .package-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #0A2647;">
+    <div class="container-fluid m-1">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+        <img src="img/LOGO-EARTH.png" alt="Logo" width="50" height="auto" class="d-inline-block">
+        MIDDLE EAST TOURS
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="destination.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="hajj-umrah.html">Hajj & Umrah</a></li>
+              <li><a class="dropdown-item" href="destination.html#historical">Historical Sites</a></li>
+              <li><a class="dropdown-item" href="destination.html#modern">Modern Attractions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hajj-umrah.html">Hajj & Umrah</a>
+          </li>
+        </ul>
+        <div class="d-Gallery gap-2 d-md-flex justify-content-md-end">
+          <button class="btn book-now-btn" type="button"><a href="booking.html">Book Now</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="package-header">
+    <div class="container text-center">
+      <h1 class="display-3 fw-bold" style="font-family: 'Cinzel', serif;">Our Tour Packages</h1>
+      <p class="lead fs-4">Expertly crafted itineraries for an unforgettable Middle Eastern experience</p>
+      <a href="booking.html" class="btn book-now-btn btn-lg px-4 py-2 mt-3">Book Your Tour Now</a>
+    </div>
+  </div>
+
+  
+  <div class="container py-5">
+    
+    <div class="row mb-5">
+      <div class="col-md-8 mx-auto text-center">
+        <h2 class="mb-4 fw-bold" style="color: #0A2647;">Choose Your Perfect Journey</h2>
+        <p class="lead">Our carefully designed packages cater to all types of travelers, from those seeking spiritual fulfillment to history enthusiasts and luxury seekers. Each package includes expert guides, quality accommodations, and seamless transportation to ensure a memorable experience.</p>
+      </div>
+    </div>
+
+    
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <ul class="nav nav-pills justify-content-center mb-4" id="packageTabs" role="tablist">
+          <li class="nav-item m-1" role="presentation">
+            <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all-packages" type="button" role="tab" aria-controls="all-packages" aria-selected="true">All Packages</button>
+          </li>
+          <li class="nav-item m-1" role="presentation">
+            <button class="nav-link" id="religious-tab" data-bs-toggle="pill" data-bs-target="#religious-packages" type="button" role="tab" aria-controls="religious-packages" aria-selected="false">Religious Tours</button>
+          </li>
+          <li class="nav-item m-1" role="presentation">
+            <button class="nav-link" id="historical-tab" data-bs-toggle="pill" data-bs-target="#historical-packages" type="button" role="tab" aria-controls="historical-packages" aria-selected="false">Historical Sites</button>
+          </li>
+          <li class="nav-item m-1" role="presentation">
+            <button class="nav-link" id="family-tab" data-bs-toggle="pill" data-bs-target="#family-packages" type="button" role="tab" aria-controls="family-packages" aria-selected="false">Family Packages</button>
+          </li>
+          <li class="nav-item m-1" role="presentation">
+            <button class="nav-link" id="luxury-tab" data-bs-toggle="pill" data-bs-target="#luxury-packages" type="button" role="tab" aria-controls="luxury-packages" aria-selected="false">Luxury Experiences</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="tab-content" id="packageTabsContent">
+      
+      <div class="tab-pane fade show active" id="all-packages" role="tabpanel" aria-labelledby="all-tab">
+        <div class="row">
+          
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card package-card shadow">
+              <div class="position-relative">
+                <span class="package-tag">Best Seller</span>
+                <img src="img/kaaba.jpg" class="card-img-top" alt="Umrah Package">
+                <div class="price-tag">₹1,00,999</div>
+              </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Umrah Package</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 10 Days / 9 Nights
+            </div>
+            <p class="card-text">A spiritually enriching journey to the holy cities of Makkah and Madinah, with expert guidance for all Umrah rituals.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-airplane"></i>
+                </div>
+                <span>Return Flights Included</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+                <span>Religious Guide Available</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+<!--       
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="discount-badge">12% OFF</span>
+            <span class="theme-badge">Historical</span>
+            <img src="img/pyramid.jpg" class="card-img-top" alt="Egypt Package">
+            <div class="price-tag">₹1,24,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Egypt Explorer</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i><span class="reviews-count">(1,276)</span>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 8 Days / 7 Nights
+            </div>
+            <p class="card-text">Discover the wonders of ancient Egypt, from the majestic pyramids to the vibrant Islamic heritage of Cairo.</p>
+            
+            <div class="inclusions-list">
+              <span class="inclusion-badge"><i class="bi bi-airplane"></i> Flights</span>
+              <span class="inclusion-badge"><i class="bi bi-building"></i> Hotels</span>
+              <span class="inclusion-badge"><i class="bi bi-car-front"></i> Transfers</span>
+              <span class="inclusion-badge"><i class="bi bi-ticket-perforated"></i> Sightseeing</span>
+            </div>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>5-Star Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Private Transportation</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Expert Egyptologist Guide</span>
+              </div>
+            </div>
+
+            <div class="emi-info">EMI from ₹5,208/month</div>
+
+            <div class="package-meta mt-3">
+              <span><i class="bi bi-calendar-event"></i> Nov 12, 2025</span>
+              <span><i class="bi bi-geo-alt"></i> Cairo • Giza • Luxor</span>
+              <span><i class="bi bi-people"></i> Small Group</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div> -->
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Luxury</span>
+            <img src="img/burj khalifa.png" class="card-img-top" alt="Dubai Package">
+            <div class="price-tag">₹1,84,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Dubai Extravaganza</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 7 Days / 6 Nights
+            </div>
+            <p class="card-text">Indulge in the opulence of Dubai with luxury accommodations, exclusive experiences, and VIP access to attractions.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>5-Star Luxury Resort</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Premium Transportation</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-ticket-perforated"></i>
+                </div>
+                <span>VIP Attraction Access</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/petra.jpg" class="card-img-top" alt="Jordan Package">
+            <div class="price-tag">₹1,39,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Jordan Discovery</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 9 Days / 8 Nights
+            </div>
+            <p class="card-text">Explore the wonders of Jordan, from the ancient city of Petra to the breathtaking landscapes of Wadi Rum.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Private 4x4 Desert Tour</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-cup-hot"></i>
+                </div>
+                <span>Authentic Bedouin Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/Dome of the rock.jpg" class="card-img-top" alt="Jerusalem Package">
+            <div class="price-tag">₹1,54,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Jerusalem Sacred Tour</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 7 Days / 6 Nights
+            </div>
+            <p class="card-text">Visit the third holiest site in Islam, Al-Aqsa Mosque, and explore the historic city of Jerusalem.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Hotel in Jerusalem</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+                <span>Religious Scholar Guide</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-card-checklist"></i>
+                </div>
+                <span>All Permits Arranged</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Family Friendly</span>
+            <img src="img/Hagia Sophia.jpg" class="card-img-top" alt="Turkey Package">
+            <div class="price-tag">₹1,32,999  </div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Turkish Delight</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 10 Days / 9 Nights
+            </div>
+            <p class="card-text">Experience the best of Turkey, from Istanbul's historic sites to Cappadocia's otherworldly landscapes.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>Boutique Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-airplane"></i>
+                </div>
+                <span>Domestic Flights Included</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-balloon-heart"></i>
+                </div>
+                <span>Hot Air Balloon Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="tab-pane fade" id="religious-packages" role="tabpanel" aria-labelledby="religious-tab">
+    <div class="row">
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Best Seller</span>
+            <img src="img/kaaba.jpg" class="card-img-top" alt="Umrah Package">
+            <div class="price-tag">₹1,00,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Umrah Package</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 10 Days / 9 Nights
+            </div>
+            <p class="card-text">A spiritually enriching journey to the holy cities of Makkah and Madinah, with expert guidance for all Umrah rituals.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-airplane"></i>
+                </div>
+                <span>Return Flights Included</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+                <span>Religious Guide Available</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/Dome of the rock.jpg" class="card-img-top" alt="Jerusalem Package">
+            <div class="price-tag">₹99,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Jerusalem Sacred Tour</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 7 Days / 6 Nights
+            </div>
+            <p class="card-text">Visit the third holiest site in Islam, Al-Aqsa Mosque, and explore the historic city of Jerusalem.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Hotel in Jerusalem</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+                <span>Religious Scholar Guide</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-card-checklist"></i>
+                </div>
+                <span>All Permits Arranged</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="tab-pane fade" id="historical-packages" role="tabpanel" aria-labelledby="historical-tab">
+    <div class="row">
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/pyramid.jpg" class="card-img-top" alt="Egypt Package">
+            <div class="price-tag">₹1,24,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Egypt Explorer</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 8 Days / 7 Nights
+            </div>
+            <p class="card-text">Discover the wonders of ancient Egypt, from the majestic pyramids to the vibrant Islamic heritage of Cairo.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>5-Star Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Private Transportation</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+                <span>Expert Egyptologist Guide</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/petra.jpg" class="card-img-top" alt="Jordan Package">
+            <div class="price-tag">₹74,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Jordan Discovery</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 9 Days / 8 Nights
+            </div>
+            <p class="card-text">Explore the wonders of Jordan, from the ancient city of Petra to the breathtaking landscapes of Wadi Rum.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Private 4x4 Desert Tour</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-cup-hot"></i>
+                </div>
+                <span>Authentic Bedouin Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="tab-pane fade" id="family-packages" role="tabpanel" aria-labelledby="family-tab">
+    <div class="row">
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <img src="img/petra.jpg" class="card-img-top" alt="Jordan Package">
+            <div class="price-tag">₹89,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Jordan Discovery</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 9 Days / 8 Nights
+            </div>
+            <p class="card-text">Explore the wonders of Jordan, from the ancient city of Petra to the breathtaking landscapes of Wadi Rum.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>4-Star Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Private 4x4 Desert Tour</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-cup-hot"></i>
+                </div>
+                <span>Authentic Bedouin Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Family Friendly</span>
+            <img src="img/Hagia Sophia.jpg" class="card-img-top" alt="Turkey Package">
+            <div class="price-tag">₹1,32,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Turkish Delight</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 10 Days / 9 Nights
+            </div>
+            <p class="card-text">Experience the best of Turkey, from Istanbul's historic sites to Cappadocia's otherworldly landscapes.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>Boutique Hotel Accommodations</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-airplane"></i>
+                </div>
+                <span>Domestic Flights Included</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-balloon-heart"></i>
+                </div>
+                <span>Hot Air Balloon Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Luxury</span>
+            <img src="img/burj khalifa.png" class="card-img-top" alt="Dubai Package">
+            <div class="price-tag">₹1,55,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Dubai Extravaganza</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 7 Days / 6 Nights
+            </div>
+            <p class="card-text">Indulge in the opulence of Dubai with luxury accommodations, exclusive experiences, and VIP access to attractions.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>5-Star Luxury Resort</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Premium Transportation</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-ticket-perforated"></i>
+                </div>
+                <span>VIP Attraction Access</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="tab-pane fade" id="luxury-packages" role="tabpanel" aria-labelledby="luxury-tab">
+    <div class="row">
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card package-card shadow">
+          <div class="position-relative">
+            <span class="package-tag">Luxury</span>
+            <img src="img/burj khalifa.png" class="card-img-top" alt="Dubai Package">
+            <div class="price-tag">$₹1,75,999</div>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h4 class="card-title fw-bold mb-0">Dubai Extravaganza</h4>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <div class="package-duration mb-3">
+              <i class="bi bi-calendar-week"></i> 7 Days / 6 Nights
+            </div>
+            <p class="card-text">Indulge in the opulence of Dubai with luxury accommodations, exclusive experiences, and VIP access to attractions.</p>
+            
+            <div class="package-features mt-3">
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-building"></i>
+                </div>
+                <span>5-Star Luxury Resort</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-car-front"></i>
+                </div>
+                <span>Premium Transportation</span>
+              </div>
+              <div class="package-feature">
+                <div class="package-icon">
+                  <i class="bi bi-ticket-perforated"></i>
+                </div>
+                <span>VIP Attraction Access</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 p-4 pt-0">
+            <a href="booking.html" class="btn book-now-btn w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="row my-5 py-5 bg-light rounded-4">
+      <div class="col-12 text-center mb-4">
+        <h2 class="fw-bold" style="color: #0A2647;">Why Choose Our Packages</h2>
+        <p class="lead text-muted">Experience the Middle East with confidence and peace of mind</p>
+      </div>
+
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="mb-3">
+            <img src="img/cards/APPROVED-01-removebg-preview.png" alt="Verified Tours" class="img-fluid" style="height: 70px;">
+          </div>
+          <h4 class="fw-bold">Expertly Curated</h4>
+          <p>Our packages are designed by travel specialists with deep knowledge of Middle Eastern culture, history, and traditions.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="mb-3">
+            <img src="img/cards/24x7.png" alt="24/7 Support" class="img-fluid" style="height: 70px;">
+          </div>
+          <h4 class="fw-bold">24/7 Support</h4>
+          <p>Enjoy round-the-clock assistance throughout your journey with our dedicated customer service team.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 text-center mb-4">
+        <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+          <div class="mb-3">
+            <img src="img/cards/hotel-removebg-preview.png" alt="Premium Accommodations" class="img-fluid" style="height: 70px;">
+          </div>
+          <h4 class="fw-bold">Quality Accommodations</h4>
+          <p>Stay in carefully selected hotels and resorts that offer comfort, convenience, and authentic experiences.</p>
+        </div>
+      </div>
+    </div>
+
+    
+  
+    
+    <div class="row py-5 my-4">
+      <div class="col-lg-8 mx-auto">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="img/kaaba2.jpg" alt="Book Now" class="img-fluid h-100" style="object-fit: cover;">
+            </div>
+            <div class="col-md-6 bg-dark text-white d-flex align-items-center">
+              <div class="p-4 p-md-5">
+                <h2 class="fw-bold mb-4">Ready to Experience the Middle East?</h2>
+                <p class="mb-4">Book your dream package today and embark on a journey of discovery, spirituality, and adventure. Special discounts available for early bookings.</p>
+                <a href="booking.html" class="btn book-now-btn btn-lg px-4 py-2">Book Now & Save 10%</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Middle East Tours</h5>
+          <p class="mb-3">Discover the beauty and history of the Middle East with our expertly guided tours.</p>
+          <img src="img/logo.png" alt="Middle East Tours Logo" class="img-fluid mb-3" style="max-width: 120px;">
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="destination.html" class="text-white text-decoration-none">Destinations</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Popular Tours</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Umrah Package</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Makkah & Madinah</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Jerusalem Tour</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Egypt Pyramids</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Oman Experience</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Contact Us</h5>
+          <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i>123 Tour Street, Dubai, UAE</p>
+          <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i>+971 123 456 789</p>
+          <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>info@middleeasttours.com</p>
+          <div class="mt-4">
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="mb-md-0">Â© 2025 Middle East Tours. All rights reserved.</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms of Use</a>
+            <a href="#" class="text-white text-decoration-none">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Your Tour - Middle East Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Forum&family=Great+Vibes&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <style>
+      
+      @media (max-width: 576px) {
+        .card-img-top {
+          padding: 0.75rem !important;
+        }
+        
+        .card-body, .card-footer {
+          padding: 1rem !important;
+        }
+        
+        .departure-date {
+          font-size: 1rem !important;
+          padding: 0.2rem 0.5rem !important;
+        }
+      }
+      
+      @media (min-width: 768px) and (max-width: 991px) {
+        .umrah-card {
+          max-width: 350px !important;
+          margin: 0 auto !important;
+        }
+      }
+      
+      @media (min-width: 992px) {
+        .umrah-card {
+          max-width: 400px !important;
+          margin: 0 auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+  <nav class=" navbar navbar-expand-lg navbar-dark shadow" style="background-color: #0A2647;">
+    <div class="container-fluid m-1">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <img src="img/LOGO-EARTH.png" alt="Logo" width="50" height="auto" class="d-inline-block">
+        MIDDLE EAST TOURS
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="destination.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="hajj-umrah.html">Hajj & Umrah</a></li>
+              <li><a class="dropdown-item" href="#">Family Trip</a></li>
+              <li><a class="dropdown-item" href="#">Group Tours</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hajj-umrah.html">Hajj & Umrah</a>
+          </li>
+        </ul>
+        <div class="d-Gallery gap-2 d-md-flex justify-content-md-end">
+          
+          <button class="btn book-now-btn"  type="button"><a href="booking.html">Book Now</a></button>
+        </div>
+
+      </div>
+  </nav>
+
+  
+  <div class="position-relative">
+    <img src="img/kaaba.jpg" class="d-block w-100" style="max-height: 350px; object-fit: cover; filter: brightness(40%);" alt="booking header">
+    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="display-4" style="font-family: Cinzel; font-weight: 700;">Book Your Middle East Journey</h1>
+      <p class="lead">Complete the form below to start your spiritual adventure</p>
+    </div>
+  </div>
+
+  
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card shadow-lg border-0 rounded-3">
+          <div class="card-body p-4">
+            <h2 class="card-title mb-4" style="font-family: 'Philosopher'; color: #0A2647;">Reservation Details</h2>
+            <form>
+              
+              <div class="mb-4">
+                <h5 class="text-secondary mb-3">Personal Information</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="mb-4">
+                <h5 class="text-secondary mb-3">Trip Details</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="tourType" class="form-label">Type of Tour</label>
+                    <select class="form-select" id="tourType" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Hajj Package</option>
+                      <option>Umrah Package</option>
+                      <option>Jerusalem & Al-Aqsa Visit</option>
+                      <option>Egypt Exploration</option>
+                      <option>Combined Package</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="travelDate" class="form-label">Preferred Date</label>
+                    <input type="date" class="form-control" id="travelDate" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="duration" class="form-label">Duration (Days)</label>
+                    <select class="form-select" id="duration" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>7 Days</option>
+                      <option>10 Days</option>
+                      <option>14 Days</option>
+                      <option>21 Days</option>
+                      <option>30 Days</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="guests" class="form-label">Number of Travelers</label>
+                    <input type="number" min="1" class="form-control" id="guests" required>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="mb-4">
+                <h5 class="text-secondary mb-3">Accommodation & Preferences</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="accommodation" class="form-label">Accommodation Type</label>
+                    <select class="form-select" id="accommodation">
+                      <option selected disabled value="">Choose...</option>
+                      <option>Standard (3-Star)</option>
+                      <option>Premium (4-Star)</option>
+                      <option>Luxury (5-Star)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="roomType" class="form-label">Room Type</label>
+                    <select class="form-select" id="roomType">
+                      <option selected disabled value="">Choose...</option>
+                      <option>Single</option>
+                      <option>Double</option>
+                      <option>Triple</option>
+                      <option>Family</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="additionalRequests" class="form-label">Special Requests</label>
+                    <textarea class="form-control" id="additionalRequests" rows="3" placeholder="Any dietary requirements, accessibility needs, or special requests..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="text-center mt-4">
+                <button type="submit" class="btn book-now-btn btn-lg px-5 py-3 rounded-pill">
+                  Submit Booking Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-5 mt-4 mt-md-0">
+        
+        <div class="card shadow border-0 rounded-3 mb-4" style="background-color: #0A2647; color: white;">
+          <div class="card-body p-4">
+            <h3 class="card-title mb-3">Why Book With Us</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3"><strong>Expert Guidance:</strong> Specialized in Islamic heritage tours</li>
+              <li class="mb-3"><strong>Best Locations:</strong> Accommodations near holy sites</li>
+              <li class="mb-3"><strong>All-Inclusive:</strong> Flights, hotels, meals, and transportation</li>
+              <li class="mb-3"><strong>24/7 Support:</strong> Assistance throughout your journey</li>
+              <li class="mb-3"><strong>Group Discounts:</strong> Special rates for families and groups</li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <div class="card shadow border-0 rounded-3 mb-4">
+          <div class="card-body p-4">
+            <h3 class="card-title mb-3" style="color: #0A2647;">Need Assistance?</h3>
+            <p>Our travel specialists are ready to help you plan the perfect Middle East journey.</p>
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-light rounded-circle p-2 me-3">
+                <img src="img/cards/24x7.png" alt="Phone" width="30" height="30">
+              </div>
+              <div>
+                <p class="mb-0"><strong>Call Us</strong><br>+1 (800) 555-TOUR</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="bg-light rounded-circle p-2 me-3">
+                <img src="img/cards/trust.png" alt="Email" width="30" height="30">
+              </div>
+              <div>
+                <p class="mb-0"><strong>Email Us</strong><br>bookings@middleeasttours.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="mt-4 px-0 px-md-2"></div>
+
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Middle East Tours</h5>
+          <p class="mb-3">Discover the beauty and history of the Middle East with our expertly guided tours.</p>
+          <img src="img/logo.png" alt="Middle East Tours Logo" class="img-fluid mb-3" style="max-width: 120px;">
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Destinations</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Popular Tours</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Umrah Package</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Makkah & Madinah</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Jerusalem Tour</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Egypt Pyramids</a></li>
+            <li class="mb-2"><a href="#" class="text-white text-decoration-none">Oman Experience</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 fw-bold">Contact Us</h5>
+          <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i>123 Tour Street, Dubai, UAE</p>
+          <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i>+971 123 456 789</p>
+          <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>info@middleeasttours.com</p>
+          <div class="mt-4">
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white me-3 fs-5"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p class="mb-md-0">Â© 2025 Middle East Tours. All rights reserved.</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms of Use</a>
+            <a href="#" class="text-white text-decoration-none">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

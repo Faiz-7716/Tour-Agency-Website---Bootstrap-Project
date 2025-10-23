@@ -1,0 +1,117 @@
+﻿    *{
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    body {
+      font-family: "Philosopher", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nav-link {
+      color: #fff;
+    }
+
+    .navbar-brand,
+    .navbar-brand:hover {
+      color: #fff;
+    }
+
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover {
+      color: #FF6F3C !important;
+    }
+    .nav-item{
+      margin: 0px 5px;
+      font-family: 'Philosopher',Poppins, Arial, Helvetica, sans-serif;
+    }
+
+    .nav-link.active {
+      border-bottom: 3px solid #ff6f3c;
+    }
+    
+    .carousel-item img {
+      filter: brightness(60%);
+    }
+    .carousel-item p{
+      font-family: "Playfair Display",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.2rem;
+    }
+    .dropdown-item{
+      color: #0A2647;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(10, 38, 71, 0.1);
+      width: 90%;
+      margin: 5px auto;
+      padding: 10px 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .dropdown-item:hover {
+      color: #FF6F3C;
+      background-color: rgba(255, 111, 60, 0.05);
+      transform: translateX(5px);
+    }
+    
+    .dropdown-menu {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+      border-top: 3px solid #FF6F3C;
+      border-bottom: 3px solid #FF6F3C;
+      animation: dropdownFade 0.3s ease;
+    }
+    
+    @keyframes dropdownFade {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    
+    .card-icon {
+      max-height: 50px;
+      width: auto;
+    }
+    .carousel-title {
+      font-size: 3rem;
+      font-family: Cinzel;
+      font-weight: 500;
+    }
+    .jerusalem-btn {
+      background-color: #977900;
+      color: #FFF;
+    }
+    .welcome-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    }
+    .kaaba-img {
+      filter: brightness(50%);
+    }
+    .kaaba-text {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .book-now-btn {
+      background: #FF6F3C;
+      color: #fff;
+    }
+    .book-now-btn:hover{
+      
+      background: #a73a12;
+      color: #fff;
+    /* filter: brightness(80%); */
+    }
+    .dropdown-menu-custom {
+      border: 2px solid #FF6F3C;
+    }
+    .card-container img{
+        filter: brightness(0) saturate(100%) invert(12%) sepia(35%) saturate(3443%) hue-rotate(195deg) brightness(94%) contrast(96%);
+    }

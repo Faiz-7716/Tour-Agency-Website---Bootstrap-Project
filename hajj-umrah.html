@@ -1,0 +1,647 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hajj & Umrah - Middle East Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Forum&family=Great+Vibes&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  
+  <style>
+    *{
+      font-family: "Philosopher", sans-serif;
+    }
+    .page-banner {
+      background: linear-gradient(rgba(10, 38, 71, 0.7), rgba(10, 38, 71, 0.7)), url('img/kaaba.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      margin-bottom: 50px;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 40px;
+      color: #0A2647;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 80px;
+      height: 3px;
+      background-color: #FF6F3C;
+    }
+    
+    .package-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      height: 100%;
+    }
+    
+    .package-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .package-card .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+    
+    .badge-featured {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #FF6F3C;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      z-index: 1;
+    }
+    
+    .price-tag {
+      background-color: #0A2647;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    .package-features {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .package-features li {
+      margin-bottom: 8px;
+    }
+    
+    .package-features li i {
+      color: #FF6F3C;
+      margin-right: 8px;
+    }
+    
+    .btn-book-now {
+      background-color: #FF6F3C;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-book-now:hover {
+      background-color: #0A2647;
+      transform: translateY(-3px);
+    }
+    
+    .testimonial-card {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .testimonial-card:before {
+      content: '\201C';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 60px;
+      color: rgba(10, 38, 71, 0.1);
+      font-family: Georgia, serif;
+    }
+    
+    .client-info {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0A2647;
+      color: white;
+      border-radius: 50%;
+      font-size: 30px;
+      margin: 0 auto 20px;
+    }
+    
+    
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .accordion-button {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: #0A2647;
+      padding: 15px 20px;
+    }
+    
+    .accordion-button:not(.collapsed) {
+      background-color: #f1f9f4;
+      color: #19a54c;
+      box-shadow: none;
+    }
+    
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #e0e0e0;
+    }
+    
+    .accordion-body {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background-color: #0A2647;">
+    <div class="container-fluid m-1">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <img src="img/LOGO-EARTH.png" alt="Logo" width="50" height="auto" class="d-inline-block">
+        MIDDLE EAST TOURS
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="destination.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="hajj-umrah.html">Hajj & Umrah</a></li>
+              <li><a class="dropdown-item" href="#">Family Trip</a></li>
+              <li><a class="dropdown-item" href="#">Group Tours</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="hajj-umrah.html">Hajj & Umrah</a>
+          </li>
+        </ul>
+        <div class="d-Gallery gap-2 d-md-flex justify-content-md-end">
+          <button class="btn book-now-btn"  type="button"><a href="booking.html">Book Now</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="page-banner text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Hajj & Umrah Packages</h1>
+      <p class="lead">Embark on a spiritual journey to Islam's holiest sites with our premium packages</p>
+    </div>
+  </div>
+
+  
+  <div class="container">
+    
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title">Your Spiritual Journey Begins Here</h2>
+          <p>Performing Hajj and Umrah is a profound spiritual experience for Muslims worldwide. At Middle East Tours, we understand the significance of this sacred journey and are dedicated to providing comprehensive, hassle-free packages that allow you to focus entirely on your spiritual obligations.</p>
+          <p>Our experienced team handles all logistics, accommodations, and transportation, ensuring your pilgrimage is comfortable, meaningful, and in accordance with Islamic traditions. With decades of experience organizing Hajj and Umrah trips, we pride ourselves on our attention to detail and personalized service.</p>
+          <div class="mt-4">
+            <a href="#packages" class="btn btn-primary me-2">View Packages</a>
+            <a href="booking.html" class="btn btn-outline-primary">Book Consultation</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/kaaba2.jpg" alt="Kaaba" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="packages" class="mb-5">
+      <h2 class="section-title text-center">Our Hajj Packages</h2>
+      <p class="text-center mb-5">Comprehensive packages tailored to different needs and budgets</p>
+      
+      <div class="row">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <span class="badge-featured">Most Popular</span>
+            <img src="img/kaaba.jpg" class="card-img-top" alt="Standard Hajj Package">
+            <div class="card-body">
+              <h5 class="card-title">Standard Hajj Package</h5>
+              <p class="card-text">A comprehensive 14-day Hajj package with comfortable accommodations and all essential services.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 14 days/13 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 3-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> All meals included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Transportation to all sites</li>
+                <li><i class="bi bi-check-circle-fill"></i> Experienced guides</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹3,99,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <img src="img/madinah.jpg" class="card-img-top" alt="Premium Hajj Package">
+            <div class="card-body">
+              <h5 class="card-title">Premium Hajj Package</h5>
+              <p class="card-text">An enhanced 16-day Hajj experience with premium accommodations closer to the holy sites.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 16 days/15 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 4-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> All meals included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Premium transportation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Experienced scholars as guides</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹5,19,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <img src="img/kaaba2.jpg" class="card-img-top" alt="VIP Hajj Package">
+            <div class="card-body">
+              <h5 class="card-title">VIP Hajj Package</h5>
+              <p class="card-text">A luxury 18-day Hajj journey with 5-star accommodations and personalized service.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 18 days/17 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 5-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Gourmet meals included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Private transportation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Personal guide and scholar</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹7,19,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mb-5">
+      <h2 class="section-title text-center">Our Umrah Packages</h2>
+      <p class="text-center mb-5">Flexible Umrah packages available year-round</p>
+      
+      <div class="row">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <img src="img/madinah.jpg" class="card-img-top" alt="Basic Umrah Package">
+            <div class="card-body">
+              <h5 class="card-title">Basic Umrah Package</h5>
+              <p class="card-text">A 10-day Umrah package with comfortable accommodations in Makkah and Madinah.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 10 days/9 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 3-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Breakfast included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Transfers between cities</li>
+                <li><i class="bi bi-check-circle-fill"></i> Group guidance</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹1,59,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <span class="badge-featured">Best Value</span>
+            <img src="img/kaaba.jpg" class="card-img-top" alt="Standard Umrah Package">
+            <div class="card-body">
+              <h5 class="card-title">Standard Umrah Package</h5>
+              <p class="card-text">A 12-day Umrah package with quality accommodations and additional ziyarat sites.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 12 days/11 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 4-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Half board (breakfast & dinner)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Guided ziyarat tours</li>
+                <li><i class="bi bi-check-circle-fill"></i> Experienced guides</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹2,23,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card package-card">
+            <img src="img/kaaba2.jpg" class="card-img-top" alt="Premium Umrah Package">
+            <div class="card-body">
+              <h5 class="card-title">Premium Umrah Package</h5>
+              <p class="card-text">A 15-day luxury Umrah experience with premium accommodations near the haram.</p>
+              <ul class="package-features mt-3">
+                <li><i class="bi bi-check-circle-fill"></i> 15 days/14 nights</li>
+                <li><i class="bi bi-check-circle-fill"></i> 5-star hotel accommodations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Full board (all meals)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Private transportation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Personal guide and scholar</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="price-tag">₹3,19,999</span>
+                <a href="booking.html" class="btn btn-book-now text-white">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mb-5 py-5 bg-light rounded">
+      <h2 class="section-title text-center">How It Works</h2>
+      <p class="text-center mb-5">Our simple 4-step process to your spiritual journey</p>
+      
+      <div class="row text-center">
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="step-icon">
+            <i class="bi bi-1-circle"></i>
+          </div>
+          <h5>Choose a Package</h5>
+          <p>Browse our packages and select the one that best fits your needs and budget.</p>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="step-icon">
+            <i class="bi bi-2-circle"></i>
+          </div>
+          <h5>Book Consultation</h5>
+          <p>Schedule a consultation with our Hajj & Umrah specialists to discuss details.</p>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="step-icon">
+            <i class="bi bi-3-circle"></i>
+          </div>
+          <h5>Documentation</h5>
+          <p>We assist with visa processing and all required documentation for your journey.</p>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="step-icon">
+            <i class="bi bi-4-circle"></i>
+          </div>
+          <h5>Travel with Peace</h5>
+          <p>Embark on your spiritual journey with complete peace of mind and support.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mb-5">
+      <h2 class="section-title text-center">What Our Pilgrims Say</h2>
+      <p class="text-center mb-5">Experiences from those who have traveled with us</p>
+      
+      <div class="row">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <p>"The Hajj package exceeded all my expectations. The accommodations were excellent, and the guides were knowledgeable and supportive throughout the journey. I would highly recommend Middle East Tours."</p>
+            <div class="client-info">
+              <div>
+                <h6 class="mb-0">Faiz Ahmed</h6>
+                <small class="text-muted">Hajj 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <p>"As a first-time Umrah pilgrim, I was nervous about the journey, but the team at Middle East Tours made everything seamless. Their attention to detail and spiritual guidance made this a truly transformative experience."</p>
+            <div class="client-info">
+              <div>
+                <h6 class="mb-0">Safwan Khan</h6>
+                <small class="text-muted">Umrah 2025</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card">
+            <p>"We opted for the Premium Hajj package, and it was worth every penny. The proximity to the Haram, quality of accommodations, and the knowledgeable scholars who accompanied us made this a journey of a lifetime."</p>
+            <div class="client-info">
+              <div>
+                <h6 class="mb-0">Farooq Malik</h6>
+                <small class="text-muted">Hajj 2023</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mb-5">
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <p class="text-center mb-5">Find answers to common questions about Hajj and Umrah</p>
+      
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        What is the difference between Hajj and Umrah?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <strong>This is the first itemâ€™s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Itâ€™s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        How far in advance should I book my Hajj package?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>This is the second itemâ€™s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Itâ€™s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        What documents are required for Hajj and Umrah?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>This is the third itemâ€™s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Itâ€™s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        What is included in your packages?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Our packages typically include:</p>
+        <ul>
+          <li>Return international flights</li>
+          <li>Accommodation in Makkah and Madinah</li>
+          <li>Meals (as specified in the package)</li>
+          <li>Transportation between cities and holy sites</li>
+          <li>Guided ziyarat tours</li>
+          <li>Visa processing assistance</li>
+          <li>Pre-departure orientation sessions</li>
+          <li>Support from experienced guides throughout the journey</li>
+        </ul>
+        <p>Specific inclusions vary by package, so please refer to the detailed package description.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Is there any physical preparation needed for Hajj or Umrah?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>Yes, physical preparation is recommended, especially for Hajj which involves more physical exertion. We advise:</p>
+        <ul>
+          <li>Starting a walking routine months before departure</li>
+          <li>Building stamina through regular exercise</li>
+          <li>Getting a thorough medical check-up</li>
+          <li>Discussing with your doctor about any chronic conditions</li>
+          <li>Preparing for climate adjustment (temperatures in Saudi Arabia can be extremely hot)</li>
+        </ul>
+        <p>We provide guidance on physical preparation during our pre-departure orientation sessions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <section class="py-5 text-center mb-5" style="background-color: #f8f9fa; border-radius: 10px;">
+      <div class="container">
+        <h2 class="mb-3">Ready to Begin Your Spiritual Journey?</h2>
+        <p class="mb-4">Contact our Hajj & Umrah specialists to discuss your pilgrimage plans</p>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <a href="booking.html" class="btn btn-primary btn-lg px-4 me-md-2">Book Now</a>
+              <a href="#" class="btn btn-outline-primary btn-lg px-4">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  
+  <footer class="text-center text-lg-start text-white" style="background-color: #0A2647">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Middle East Tours</h5>
+          <p>Your trusted partner for Hajj and Umrah pilgrimages since 1995. Providing spiritual journeys with comfort and care.</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Quick Links</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="hajj-umrah.html" class="text-white">Hajj & Umrah</a></li>
+            <li><a href="packages.html" class="text-white">Packages</a></li>
+            <li><a href="booking.html" class="text-white">Book Now</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contact Us</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-geo-alt me-2"></i> 123 Tourism Street, Dubai, UAE</li>
+            <li><i class="bi bi-telephone me-2"></i> +971 4 123 4567</li>
+            <li><i class="bi bi-envelope me-2"></i> info@middleeasttours.com</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Follow Us</h5>
+          <ul class="list-unstyled mb-0 d-flex justify-content-center justify-content-lg-start">
+            <li class="me-3"><a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a></li>
+            <li class="me-3"><a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a></li>
+            <li class="me-3"><a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a></li>
+            <li><a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Â© 2025 Middle East Tours. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-RNdMvyJ8lj+Yf0R25u6P0vxQvb4fI7FirKplVjb6rGs6TZRdPvi3LuNJhN8OF0c5" crossorigin="anonymous"></script>
+  
+</body>
+</html>
